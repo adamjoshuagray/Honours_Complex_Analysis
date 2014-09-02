@@ -1,0 +1,35 @@
+\documentclass{unswmaths}
+\usepackage{unswshortcuts}
+\usepackage{dsfont}
+\begin{document}
+\author{Adam J. Gray}
+\title{Assignment 1}
+\subject{Complex Analysis}
+\studentno{3329798}
+
+\newcommand{\llra}{\Leftrightarrow}
+
+\unswtitle
+
+\section*{Question 5}
+We proprose the function
+\begin{align*}
+    f(z) := \frac{z}{\log(|z|)}
+\end{align*}
+and prove that it satisfies the desired attributes.
+If we write $ z = re^{i\theta} $ and $ f(z) = u(r, \theta) + iv(r, \theta) $ then we can use the polar form of the Cauchy Riemann equations.
+
+It is not hard to show that that Cauchy Riemann equations have an equivelent polar form
+\begin{align*}
+    \frac{\partial u}{\partial r} = \frac{1}{r} \frac{\partial v}{\partial \theta} \ \ \ \ \ \  \frac{\partial v}{\partial r} = - \frac{1}{r} \frac{\partial u}{\partial \theta}
+\end{align*}
+
+then see that
+\begin{align*}
+    \frac{\partial u}{\partial r} &= \frac{\partial}{\partial r} \left[ \frac{\cos(\theta)}{\log(r)}\right] \\
+        &= \frac{-\cos(\theta)}{r \log^2(r)} \\
+    \text{ and } \\
+    \frac{\partial v}{\partial \theta} &= \frac{\partial}{\partial \theta} \left[ \frac{\sin(\theta)}{\log(r)}\right] \\
+        &= \frac{\cos(\theta)}{\log(r)} 
+\end{align*}
+\end{document}
