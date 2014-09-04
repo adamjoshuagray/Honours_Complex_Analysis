@@ -11,25 +11,16 @@
 
 \unswtitle
 
-\section*{Question 5}
-We proprose the function
-\begin{align*}
-    f(z) := \frac{z}{\log(|z|)}
-\end{align*}
-and prove that it satisfies the desired attributes.
-If we write $ z = re^{i\theta} $ and $ f(z) = u(r, \theta) + iv(r, \theta) $ then we can use the polar form of the Cauchy Riemann equations.
+\section{}
+\section{}
+Since $ f_1 $ is complex differentiable on $ \Cplx $, $ f_1 $ cannot have any singularities in the unit ball and so all the of singularities of $f_1 / f_2 $ in the unit ball come from $ 1/ f_2 $. 
 
-It is not hard to show that that Cauchy Riemann equations have an equivelent polar form
-\begin{align*}
-    \frac{\partial u}{\partial r} = \frac{1}{r} \frac{\partial v}{\partial \theta} \ \ \ \ \ \  \frac{\partial v}{\partial r} = - \frac{1}{r} \frac{\partial u}{\partial \theta}
-\end{align*}
+We therefore turn our attention to $ 1 / f_2 $. It is simple to see that if $ 1/f_2 $ has infinitely many poles in the unit ball then $ f_2 $ has infinitely many zeros in the unit ball (at the same locations). Say these zeros are at $ \{ z_n \}_n $ then by the complex analogue of the Bolzano-Wierstrass theorem there exists a subsequence $ \{ x_{n_k} \}_k \subseteq \{ x_n \}_n $ such that $ \lim_{k\lra\infty} x_{n_k} $ exists. 
 
-then see that
-\begin{align*}
-    \frac{\partial u}{\partial r} &= \frac{\partial}{\partial r} \left[ \frac{\cos(\theta)}{\log(r)}\right] \\
-        &= \frac{-\cos(\theta)}{r \log^2(r)} \\
-    \text{ and } \\
-    \frac{\partial v}{\partial \theta} &= \frac{\partial}{\partial \theta} \left[ \frac{\sin(\theta)}{\log(r)}\right] \\
-        &= \frac{\cos(\theta)}{\log(r)} 
-\end{align*}
+Suppose $ x^* $ is the limit point of this sequence then by theorem 1 of lecture notes 4, we have that $ f_2 \equiv 0 $ for all $ z $ in the unit ball. 
+
+This means that if $ f_1 / f_2 $ has infinitely many poles in the unit ball then $ f_2 \equiv 0 $ in the unit ball. So if we disregard this degenerate case then $ f_1 / f_2 $ cannot have infinitely many poles in the unit ball.
+
+\section{}
+
 \end{document}
