@@ -12,6 +12,33 @@
 \unswtitle
 
 \section{}
+
+Write $ s = \sigma + it $.  Then consider
+\begin{align*}
+    \zeta(s) - \frac{1}{s-1} &= \sum_{n=1}^\infty n^{-s} - \frac{1}{s-1} \\
+        &= \sum_{n=1}^\infty \left[ n^{-s} \int_{n}^{n+1} x^{-s} dx \right] \\
+        &= \sum_{n=1}^\infty \int_n^{n+1} (n^{-s} - x^{-s})dx.
+\end{align*}
+Now note that 
+\begin{align*}
+    |n^{-s} - x^{-s}| = \left| s \int_{n}^{x} y^{-1-s}dy \right| \leq |s|n^{-1-\sigma}
+\end{align*}
+for $ x \in [n, n+1] $
+and hence
+\begin{align*}
+   \int_n^{n+1} (n^{-s} - x^{-s}) dx \leq |s|n^{-1-\sigma}  
+\end{align*}
+which means that
+\begin{align*}
+     \sum_{n=1}^\infty \int_n^{n+1} (n^{-s} - x^{-s})dx
+\end{align*}
+converges absolutely on compact subsets of $ \Re(s) > 0 $.
+Now as each term in the sum is an analytic function then the sum is an analytic function for $ \sigma > 0 $. 
+So
+\begin{align*}
+    \zeta(s) = \sum_{n=1}^\infty \int_{n}^{n+1}(n^{-s} - x^{-s})dx + \frac{1}{s-1} 
+\end{align*}
+defines an analytic continuation of $ \zeta(s) $ for $ \Re(s) > 0 $ and $ s \neq 1 $.
 \section{}
 Since $ f_1 $ is complex differentiable on $ \Cplx $, $ f_1 $ cannot have any singularities in the unit ball and so all the of singularities of $f_1 / f_2 $ in the unit ball come from $ 1/ f_2 $. 
 
@@ -22,5 +49,7 @@ Suppose $ x^* $ is the limit point of this sequence then by theorem 1 of lecture
 This means that if $ f_1 / f_2 $ has infinitely many poles in the unit ball then $ f_2 \equiv 0 $ in the unit ball. So if we disregard this degenerate case then $ f_1 / f_2 $ cannot have infinitely many poles in the unit ball.
 
 \section{}
+
+
 
 \end{document}
