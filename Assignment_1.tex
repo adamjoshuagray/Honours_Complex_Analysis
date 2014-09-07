@@ -49,9 +49,36 @@ Suppose $ x^* $ is the limit point of this sequence then by theorem 1 of lecture
 This means that if $ f_1 / f_2 $ has infinitely many poles in the unit ball then $ f_2 \equiv 0 $ in the unit ball. So if we disregard this degenerate case then $ f_1 / f_2 $ cannot have infinitely many poles in the unit ball.
 
 \section{}
-
+\begin{align*}
+    w(z) := \sqrt{k(\rho)} \operatorname{sn}\left( \frac{2K}{\pi} \sin^{-1} z ;\rho \right)
+\end{align*}
+where
+\begin{align*}
+    \rho = \left( \frac{a-b}{a+b}\right)^2
+\end{align*}
+and where $ sn $ corresponds the the inversion of the Jacobi Elliptic function of the first kind,
+is the conformal mapping of the ellipse with foci $ \pm \sqrt{k(\rho)} $. A full derivation of this mapping, can be found in \emph{Conformal Mapping} by Zeev Nehari.
 \section{}
 
+To do this we just have to prove equivelence of the norm to the $\sup $ norm.
+
+\begin{align*}
+    \int \int_{B_{R}(z)} f dA = \pi R^2 f(z) 
+\end{align*} 
+where $ B_{R}(z) $ is a unit ball centered at $ z $ of radius $ R $ because $ f = u + iv $ has $ u $ and $ v $ harmonic.
+Then
+\begin{align*}
+    |f(z)| \leq \frac{1}{\pi R^2}\int \int_{B_{R}(z)} |f(z)| dA \leq \frac{1}{\pi R^2} \sqrt{\int \int_{B_{R}(z)} |f(z)|^2 dA}
+\end{align*}
+Thus 
+\begin{align*}
+    \sup_{|z| \leq R} |f(z)| \leq \frac{1}{\pi R^2} \sqrt{\int \int_{B_{R}(0)}|f(z)|dA}.
+\end{align*}
+Next see that by the integral estimation lemma we have the opposite
+\begin{align*}
+     \sup_{|z| \leq R} |f(z)| \geq \frac{1}{\pi R^2} \sqrt{\int \int_{B_{R}(0)}|f(z)|dA}   
+\end{align*}
+and hence the norms are equivelent. Note that by setting $ R = 1 $ we have a result specific to the question.
 \section{}
 \begin{align*}
     f(z) := \sum_{n=1}^\infty z^{2^n}
@@ -80,5 +107,7 @@ So for some $ z^* $ such that $ |z^*| = 1 $
     \lim_{z\lra z^*} f(z) = \underbrace{\lim_{z \lra z^*, z \in \mathbb{Q}_{\pi}} f(z)}_{\text{does not exist}}
 \end{align*}
 and hence $ \lim_{z \lra z^*}f(z) $ does not exist. 
+
+
 
 \end{document}
