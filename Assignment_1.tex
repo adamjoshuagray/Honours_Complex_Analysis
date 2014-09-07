@@ -50,6 +50,35 @@ This means that if $ f_1 / f_2 $ has infinitely many poles in the unit ball then
 
 \section{}
 
+\section{}
 
+\section{}
+\begin{align*}
+    f(z) := \sum_{n=1}^\infty z^{2^n}
+\end{align*}
+Firstly we need to show that $ f(z) $ is complex differentiable inside the unit ball.
+
+To do that note firstly
+\begin{align*}
+    \sum_{n=1}^\infty \left| z^{2^n} \right| \leq \sum_{n=1}^\infty |z^n| 
+\end{align*}
+so long as $ |z| < 1 $, and so by the comparison test $ f(z) $ must converge inside the unit ball.
+
+Next note that $ z^{2^n} $ is clearly complex differentiable because $ z $ is complex differentiable. 
+So in the unit ball $ f(z) $ is the sum of complex differentiable functions, and the sum converges absolutely. Therefore, $ f(z) $ is complex differentaible inside the unit ball.
+
+Let us next show that for $ z = e^{\frac{k}{2^j} \pi} $, $f(z) $ does not converge. 
+See that
+\begin{align*}
+    f(e^{\frac{k}{2^j}\pi}) &= \sum_{n=1}^\infty e^{2^{n-j} k\pi} \\
+        &= \sum_{n=1}^{n=j} e^{2^(n-j)k\pi} + \sum_{n=1}^\infty 1
+\end{align*}
+and so $ f(e\frac{k\pi}{2^j}) $ does not converge. It is well known that numbers of the form $ \mathbb{Q}_{\pi} := e\frac{k\pi}{2^j} $ are dense on the boundry of the unit ball. 
+
+So for some $ z^* $ such that $ |z^*| = 1 $
+\begin{align*}
+    \lim_{z\lra z^*} f(z) = \underbrace{\lim_{z \lra z^*, z \in \mathbb{Q}_{\pi}} f(z)}_{\text{does not exist}}
+\end{align*}
+and hence $ \lim_{z \lra z^*}f(z) $ does not exist. 
 
 \end{document}
