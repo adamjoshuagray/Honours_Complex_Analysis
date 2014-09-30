@@ -1,0 +1,49 @@
+\documentclass{unswmaths}
+\usepackage{unswshortcuts}
+\usepackage{dsfont}
+\begin{document}
+\author{Adam J. Gray}
+\title{Assignment 1}
+\subject{Complex Analysis}
+\studentno{3329798}
+
+\newcommand{\llra}{\Leftrightarrow}
+
+\unswtitle
+
+\section{}
+\section{}
+\section{}
+\section{}
+\section{}
+
+We can identify any Mobius transformation 
+\begin{align}
+    f(z) = \frac{az + b}{cz + d} \sim \left[ \begin{array}{cc} a & b \\ c & d \end{array}\right]
+\end{align}
+with a matrix in $ GL_2(\mathbb{C}) $.
+
+Also see that if
+\begin{align}
+    f \sim \left[ \begin{array}{cc} a & b \\ c & d \end{array}\right] \\
+    g \sim \left[ \begin{array}{cc} e & f \\ g & h \end{array}\right] 
+\end{align}
+then
+\begin{align}
+    (g \circ f) &\sim \left[ \begin{array}{cc} e & f \\ g & h \end{array}\right] \left[ \begin{array}{cc} a & b \\ c & d \end{array} \right] \\
+    &\sim \left[ \begin{array}{cc} ea + fc & eb + fd \\ ag + ch & gb + dh\end{array}\right].
+\end{align}
+Noice that this identificaiton is not unqiue as
+\begin{align}
+    \frac{az + b}{cz+d} \sim \lambda\left[ \begin{array}{cc} a & b \\ c & d \end{array}\right]
+\end{align}
+for $ \lambda \in \Cplx $.
+It turns out that the group of automorphisms on $ \hat{\Cplx} $ (the projective line) is isomorphic the the projective linear group, that is
+\begin{align}
+    \operatorname{Aut}(\hat{\Cplx}) \cong \operatorname{PGL}(2,\Cplx).
+\end{align}
+We are interested finite subgroups of $ \operatorname{Aut}(\hat{\Cplx}) $ and hence we are interested in finite subgroups of $ \operatorname{PGL}(2, \Cplx) $.
+
+
+
+\end{document}
