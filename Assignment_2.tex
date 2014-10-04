@@ -14,7 +14,39 @@
 \section{}
 \section{}
 \section{}
+
+Let $ G_1 $ be the group of all conformal mappings from the unit ball into itself and let $ G_2 $ be the set of all conformal mappings from the upper half plane into itself. The group operation in both cases is function composition.  We claim that these two groups are isomorphic. 
+
+Let $ D_1 = \{ z \in \Cplx : |z| < 1 \} $ and let $ U = \{ z : \Im(z) > 1 \} $.
+
+Define the mapping $ M : D_1 \lra U $ by
+$$ M(z) = \frac{(z+1)(1-i)}{2(z-i)}.$$
+This is a Mobius transformation, so it is a conformal mapping and importantly bijective. 
+
+We can produce an \emph{induced} transformation $ M_G : G_1 \lra G_2 $ where for $ f \in G_1 $
+$$
+	(M_G f)(x) = (M \circ f \circ M^{-1})(x).
+$$
+Obviously the inverse transformation $ M^{-1}_G : G_2 \lra G_1 $ is given by 
+$$
+	(M^{-1}_G f)(x) = (M^{-1} \circ f \circ M)(x) 
+$$
+for $ f \in G_2 $.
+
+We just have to show that this is a group homomorphism.  
+
+For $ f_1, f_2 $ in $ G_1 $
+$$ M_G(f_1 \circ f_2) = M\circ f_1 \circ f_2 \circ M^{-1} = M\circ f_1 \circ M^{-1} \circ M \circ f_2 \circ M^{-1} = M_G(f_1) \circ M_G(f_2) $$
+and so $ M_G $ is a group homomorphism. 
+
+Thus the groups $ G_1 $ and $ G_2 $ are isomorphic. 
+
 \section{}
+Let $ D $ be a multiply connected domain. Let $ D_0 $ be its convex hull. Then pick an $ a \in D_0 \setminus D $. Such an $ a $ must exist as $ D $ is multiply connected.
+
+Then the function $ f : D \lra \Cplx $, $$ f(z) = \frac{1}{z-a} $$ cannot be analytically extended to all of $ D_0 $. 
+
+
 \section{}
 
 We can identify any Mobius transformation 
