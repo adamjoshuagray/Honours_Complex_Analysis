@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.10.1)  6 OCT 2014 22:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) (preloaded format=pdflatex 2014.10.1)  10 OCT 2014 12:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -440,35 +440,31 @@ Overfull \hbox (18.24684pt too wide) in paragraph at lines 50--51
 / pointwise -[] convergence -[]
  []
 
-[2] [3] [4] (./Assignment_2.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[2] [3] [4] (./Assignment_2.aux) ) 
 Here is how much of TeX's memory you used:
- 3706 strings out of 493107
- 49284 string characters out of 6138433
- 125935 words of memory out of 5000000
- 7074 multiletter control sequences out of 15000+600000
+ 3697 strings out of 493107
+ 49137 string characters out of 6138433
+ 125701 words of memory out of 5000000
+ 7065 multiletter control sequences out of 15000+600000
  8920 words of font info for 34 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  49i,15n,45p,563b,265s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2014
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2014/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2014/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-12.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/
-texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2
-014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2014/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2014/texmf-dist/font
-s/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2014/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmtt10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msbm10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfont
-s/symbols/msbm7.pfb>
-Output written on Assignment_2.pdf (5 pages, 443291 bytes).
+<c:/texlive/2014/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx12.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmcs
+c10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2014/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2014/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2014/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr7.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy10.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy7.pfb><c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+<c:/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><c:/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2014/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on Assignment_2.pdf (5 pages, 443131 bytes).
 PDF statistics:
  87 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream
