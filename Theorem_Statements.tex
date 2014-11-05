@@ -1,0 +1,360 @@
+\documentclass{unswmaths}
+\usepackage{unswshortcuts}
+\usepackage{fullpage}
+\usepackage{dsfont}
+\begin{document}
+\author{Adam J. Gray}
+\title{Assignment 1}
+\subject{Complex Analysis}
+\studentno{3329798}
+
+\section*{Definitions and Theorems}
+
+\begin{definition}
+    $ D \subset \Cplx $ is a domain it it is open and connected.
+\end{definition}
+
+\begin{definition}
+    $ f : D \lra \Cplx $ is real differentiable at $ z_0 $ if there exists a good affine approximation. That is
+    $$
+        f(z) = f(z_0) + A(x - x_0) + B(y-y_0) + o(z-z_0).
+    $$
+We use the following notation:
+    $$
+        \frac{df}{dz} = \frac{1}{2} \left( \frac{df}{dx} - i \frac{df}{dy} \right)
+    $$
+    $$
+        \frac{df}{d\bar{z}} = \frac{1}{2} \left( \frac{df}{dx} + i \frac{df}{dy} \right).
+    $$
+\end{definition}
+\begin{definition}
+    $ f : D \lra \Cplx $ is complex differentiable if $ \frac{df}{d\bar{z}} = 0 $.
+\end{definition}
+\begin{lemma}
+    If $ f = u + -iv $, where $ u $ and $ v $ are real functions, then complex differentiability is written as 
+    \begin{align}
+        \frac{du}{dx} = \frac{dv}{dy} \\
+        \frac{du}{dy} = -\frac{dv}{dx}
+    \end{align}
+\end{lemma}
+
+\begin{definition}
+    Let $ f : D \lra \Cplx $ be a bijection. We say $ f $ is conformal if
+    $$ \langle f(z_0 + hz_1) - f(z_0), f(z_0 + hz_2) - f(z_0) \rangle = c(z_0) h^2\langle z_0, z_1 \rangle + o(h^2) $$
+\end{definition}
+
+\begin{theorem}
+    Let $ f : D \lra \Cplx $ be real differentiable function. The following conditions are equivalent.
+    \begin{itemize}
+        \item $ f $ is complex differentiable and bijective \\
+        \item $ f $ is conformal
+    \end{itemize}
+\end{theorem}
+
+\begin{definition}
+    A differentiable mapping $ \gamma : [0,1] \lra \Cplx $ is called a contour. 
+\end{definition}
+
+\begin{definition}
+    Let $ f : D \lra \Cplx $ be continuous and let $ \gamma : [0,1] \lra D $ be a contour. If $ 0 = t_0 < t_1 < \cdots < t_n = 1 $ then the Riemann sum is defined by
+    $$
+        \sum_{k=0}^{n-1} f(\gamma(t_k))(\gamma(t_{k-1}) - \gamma(t_k)).
+    $$
+    If this Riemann sum converges for all partitions as $ \sup_{0 \leq k < n} (t_{k+1} - t_k) \lra 0 $, then the result is called the integral over the contour $ \gamma $.
+\end{definition}
+
+\begin{theorem}
+    Since $ f $ is continuous, the integral $ \int_\gamma f(z) dz $ \emph{always} exists.
+\end{theorem}
+
+\begin{lemma}
+    If 
+    \begin{align*}
+        \gamma_3(t) =
+        \begin{cases}
+            \gamma_1(2t) & 0 \leq t < \frac{1}{2} \\
+            \gamma_2(2t - 1) & \frac{1}{2} \leq t \leq 1
+        \end{cases}
+    \end{align*}
+    then
+    $$
+        \int_{\gamma_1} f(z)  dz + \int_{\gamma_2} f(z) dz = \int_{\gamma_3} f(z) dz.
+    $$
+\end{lemma}
+
+\begin{lemma}
+    If $ \gamma_2(t) = \gamma_1(1-t) $ then 
+    $$
+        \int_{\gamma_1} f(z) dz = -\int_{\gamma_2} f(z) dz.
+    $$
+\end{lemma}
+
+\begin{theorem}
+    If $ D $ is a simply connected domain and if $ f : D \lra \Cplx $ is complex differentiable, then $ \int_\gamma f(z) dz = 0 $ for every closed contour $ \gamma : [0,1] \lra D $. 
+\end{theorem}
+
+\begin{theorem}
+    If $ D $ is a simply connected domain and if $ f : D \lra \Cplx $ is complex differentiable then
+    $$
+        \frac{1}{2\pi i } \int_{\gamma} \frac{f(z)}{z - w} dz = f(w)
+    $$
+for every closed contour $ \gamma : [0,1] \lra D $ and for every $ w $ in the \emph{interior} of $ \gamma $.
+\end{theorem}
+
+\begin{theorem}
+    If $ D $ is a simply connected domain and if $ f : D \lra \Cplx $ is complex differentiable, then
+    $$
+        f(w) = \sum_{k \geq 0} c_k(w - w_0)^k
+    $$
+where the series converges in some neighbourhood of $ w_0 $.
+\end{theorem}
+
+\begin{corollary}
+    If $ D $ is a simply connected domain and if $ f : D \lra \Cplx $ is complex differentiable, then
+    $$
+        \frac{n!}{2\pi i} \int_\gamma \frac{f(z)}{(z-w)^{n+1}} dz = f^{(n+1)}(w)
+    $$
+for every closed contour $ \gamma : [0,1] \lra D $ and for every $ w $ in the \emph{interior} of $ \gamma $.
+\end{corollary}
+
+\begin{theorem}
+    If $ f : \Cplx \lra \Cplx $ is bounded an complex differentiable, then $ f = const $.
+\end{theorem}
+
+\begin{theorem}
+    Let $ f_1, f_2 : D \lra \Cplx $ be complex differentiable functions. If $ A \subset D $ admits a limit point $ a \in D $ and if $ f_1 = f_2 $ on $ A $, then $ f_1 = f_2 $ on $ D $.
+\end{theorem}
+
+\begin{theorem}
+    Let $ f_n : D \lra \Cplx $ be complex differentiable. Set
+    $$
+        f(z) = \sum_{n \geq 0} f_n(z)
+    $$
+    where the series converges uniformly on compact subsets of $ D $. We have that $ f $ is complex differentiable in $ D $ and 
+    $$
+        f^{(k)}(z) = \sum_{n \geq 0} f_n^{(k)}(z).
+    $$
+\end{theorem}
+
+\begin{theorem}
+    Let $ D $ be a simply connected domain and let $ K \subset D $ be a compact set. Let $ f : D \lra \Cplx $ be complex differentiable. For a given $ \varepsilon > 0 $, there exists a polynomial $ P $ such that
+    $$
+        \sum_{z\in K} |f(z) - P(z)| \leq \varepsilon
+    $$
+\end{theorem}
+
+\begin{theorem}
+    Let $ D $ be a comply connected domain and let $ f : D \lra \Cplx $ be complex differentiable. We have
+    $$
+        f(z) = \sum_{n \geq 0} P_n(z)
+    $$
+    where each $ P_n $ is a polynomial and the series converges uniformly on compact subsets in $ D $.
+\end{theorem}
+
+\begin{theorem}
+    If $ D = \{ f < |z| < R \} $ and if $ f : D \lra \Cplx $ is complex differentiable, then
+    $$
+        f(z) = \sum_{n = -\infty}^\infty c_n z^n
+    $$
+    where the series converges in $ D $. The coefficients $ c_n $, $ n \in \mathbb{Z} $ are given by
+    $$
+        c_n = \frac{1}{2\pi i} \int_{|w| = \rho} \frac{f(w)dw}{w^{n+1}}
+    $$
+    when $ r < \rho < R $.
+\end{theorem}
+
+\begin{corollary}
+    If $ D = \{ r < |z| < R \} $ and if $ f : D \lra \Cplx $ is complex differentiable, then $ f = f_1 + f_2 $ where $ f_1 $ is complex differentiable on $ \{|z| < R\}, f_2 $ is complex differentiable on $ \{ |z| > r\} $. This representation is \emph{not} unique.
+\end{corollary}
+
+\begin{theorem}
+    Let $ D = \{ f < |z| < R \} $ and let 
+    $$
+        f(z) = \sum_{n = -\infty}^\infty c_n z^n
+    $$
+    where the series converges in $ D $. We have
+    $$
+        c_n = \frac{1}{2\pi i } \int_{|w| = \rho} \frac{f(w)dw}{w^{n+1}}
+    $$
+    when $ r < \rho < R $.
+\end{theorem}
+
+\begin{theorem}
+	If $ D = \{ r < |z| < R \} $ and if $ f: D \lra \Cplx $ is complex differentiable, then
+	$$
+		f(z) = \sum_{n=-\infty}^\infty c_nz^{n}
+	$$
+	where
+	$$
+		|c_n| \leq \frac{1}{\rho^n} \sum_{|z| = \rho} |f(z)|.
+	$$
+\end{theorem}
+
+\begin{theorem}
+	An isolated singularity is removable if and only if $ c_n = 0 $ for all $ n < 0 $. An isolated singularity is a pole if and only if $ c_n = 0 $ for all $ n < -N $ for some $ N \in \Ntrl $.
+\end{theorem}
+
+\begin{theorem}
+	If $ a $ is an essential singularity of a complex differentiable function $ f $, then for every $ b \in \Cplx $, there exists a sequence $ z_n \lra a $ such that $ f(z_n) \lra b $.
+\end{theorem}
+
+\begin{theorem}
+If a meromorphic function $ f $ does not have an essential singularity at $ \infty $, then $ f $ is rational.
+\end{theorem}
+
+\begin{definition}
+	Let a complex differentiable function $ f $ have an isolated singularity at $ a $. Its residue at $ a $ is defined by the formula
+	$$
+		\operatorname{Res}_{z = \infty} f(z) = 1\frac{1}{2 \pi i} \int_{|z| = r} f(z) dz
+	$$
+	where $ r $ is \emph{sufficiently large}.
+\end{definition}
+
+\begin{theorem}
+	Let $ f $ be a complex differentiable function on a simply connected domain $ D $ except at the points $ a_k $, $ 1 \leq k \leq N $. For every contour $ \gamma $ in $ D $, we have
+	$$
+		\int_{\gamma} f(z) dz = 2\pi i \sum{a_k \text{ is inside } \gamma} \operatorname{Res}_{z = a_k} f(z).
+	$$
+	In particular, for a meromorphic function $ f $ with an isolated singularity at $ \infty $ we have
+	$$
+		\operatorname{Res}_{z = \infty}f(z) = \sum_{k=1}^N \operatorname{Res}_{z=a_k} f(z).
+	$$
+\end{theorem}
+
+\begin{theorem}
+	For every sequence $ a_n \lra \infty $, there exists a meromorphic function $ f $ with given principal parts $ f_{a_n} $. In particular, every meromorphic function is written as follows
+	$$
+		f(z) = h(z) + \sum_{n=1}^\infty (f_{a_n} - P_n)
+	$$
+	where $ P_n $ are polynomials and $ h $ is an entire function.
+\end{theorem}
+
+\begin{theorem}
+	If $ P $ is a polynomial, then
+	$$
+		P(z) = K \cdot \prod_{k=0}^{n-1} (z - a_k)
+	$$
+	where $ K $ is a constant and $ a_k $ are the roots of $ P $.
+\end{theorem}
+
+\begin{theorem}
+	If $ a_n \lra \infty $, there there exists an entire function $ f $ which has zeros exactly at the points $ a_n $.
+\end{theorem}
+
+\begin{corollary}
+	Every entire function admits a decomposition
+	$$
+		f(z) = z^m e^{g(z)} \prod_{n=0}^\infty \left( 1 - \frac{z}{a_n} \right)\exp\left( \sum_{k=1}^n \frac{z^k}{k a_n^k} \right)
+	$$
+	where $ g $ is also entire.
+\end{corollary}
+
+\begin{definition}
+	An entire function is said to be of type $ p $ if $ |f(z)| \leq \exp \left( K |z|^p \right) $ for some constant $ K $ and $ |z| > R $.
+\end{definition}
+
+\begin{theorem}
+	Let $ f $ be an entire function of order $ p \in [m,m+1) $. We have
+	$$
+		f(z) = z^m \exp\left( g(z) \right) \prod_{n=0}^\infty \left( 1 - \frac{z}{a_n}\right) \exp\left( \sum_{k=1}^m \frac{z^k}{k a_n^k}\right)
+	$$
+\end{theorem}
+
+\begin{definition}
+	Let $ f : D_1 \lra \Cplx $ be complex differentiable. If $ D_1 \cap D_2 \neq \emptyset $, then the complex differentiable function $ g : D_2 \lra \Cplx $ is called an analytic continuation of $ f $ if $ g|_{D_1 \cap D_2} = f|_{D_1 \cap D_2} $.
+\end{definition}
+
+\begin{definition}
+	Let $ \emptyset \neq \Delta \subset D_1 \cap D_2 $. We say that $ f_2 : D_2 \lra \Cplx $ is an immediate analytic continuation of $ f_1 : D_1 \lra \Cplx $ through $ \Delta $ if $ f_1 |_\Delta = f_2 |_\Delta $.
+\end{definition}
+
+\begin{definition}
+	We say that $ f_2 : D_2 \lra \Cplx $ is an analytic continuation of $ f_1 : D_1 \lra \Cplx $ if 
+	\begin{enumerate}
+		\item there exists a domain $ D_1 = G_0, G_1, \ldots, G_n = D_2 $ such that $ \emptyset \neq \Delta_k  \subset G_k \cap G_{k+1} $, $ 0 < k < n $. \\
+		\item there exists functions $ g_k : G_k \lra \Cplx $, $ 0 \leq k \leq n $, such that $ g_0 = f_1 $ and $ g_n = f_2 $. \\
+		\item for every $ 0 \leq k < n $, $ g_{k+1} : G_{k+1} \lra \Cplx $ is an immediate analytic continuation of $ g_k : G_k \lra \Cplx $ through $ \Delta_k $.
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}
+	Suppose $ \gamma : [0,1] \lra\ Cplx $ is a contour. We say that $ f_0 : \{ |z-\gamma(0)| < r \} $ extends along $ \gamma $ if there exists a mapping $ R : [0,1] \lra (0, \infty) $, $ R(0) = r $ and complex differentiable functions $ f_t : \{|z - \gamma(t)| < R(t) \} $, $ t \in [0,1] $ such that
+	\begin{enumerate}
+		\item For every $ t \in [0,1] $ let $ (a(t),b(t)) $ be the maximal interval containing $ t $ such that $ |\gamma(t) - \gamma(s) | <R(t) $ for every $ s \in (a(t), b(t)) $.
+		\item For every $ s\ in (a(t), b(t)) $, the function $ f_s : \{ |z - \gamma(s)| < R(s) \} $ is an immediate analytic continuation of $ f_t : ]\{ |z- \gamma(t)| <R(t) \} $.
+	\end{enumerate}	 
+\end{definition}
+	
+\begin{theorem}
+	If $ f_0 : \{ |z -\gamma(0)| < r \} $ extends along $ \gamma $, then $ f_1 $ does not depend on the particular choice of $ f_t $.
+\end{theorem}
+
+\begin{theorem}
+	Analytic continuation along the path is an analytic continuation.
+\end{theorem}
+
+\begin{theorem}
+	Let $ \gamma_s $ with $ s \in [0,1] $ be the continuous deformation of $ \gamma_0 $ into $ \gamma_1 $ (with common endpoints). If $ f_0 $ extends along every $ \gamma_s $ then the analytic continuation of $ f_0 $ along $ \gamma_1 $ is identical to that along $ \gamma_0 $.
+\end{theorem}
+
+\begin{theorem}
+	The set $ \mathcal{B} $ of all complex differentiable function $ f : D \lra \Cplx $ such that $ |f| \leq 1 $ in $ D $ is compact.
+\end{theorem}
+
+\begin{theorem}
+	Let $ D $ be a comply connected domain and let $ h : D \lra \Cplx $ be complex differentiable. If $ h(z)  \neq 0 $ for every $ z \in D $, then there exists a complex differentiable function $ g : D \lra \mathbb{D} $ such that $ g^2 = h $. 
+\end{theorem}
+
+\begin{lemma}
+	If $ f_n  : D \lra \Cplx $ is a sequence of injective complex differentiable functions. If $ f_n \lra F $ uniformly con compact subsets, then either $ f $ is injective or $ f = const $.
+\end{lemma}
+
+
+\begin{theorem}
+	Every simply connected domain $ D \subset \Cplx $ is conformally equivalent to a unit ball.
+\end{theorem}
+
+\begin{theorem}
+	If $ f : D \lra \Cplx $ is complex differentiable and if $ f: \hat{D} \lra \Cplx $ is continuous then $ |f| $ attains its maximum on the boundary. 
+\end{theorem}
+
+\begin{lemma}
+	If $ f : \{ |z| < 1 \} \lra \{ |z| < 1 \} $ and if $ f(0) =0 $ then $ |f(z)| \leq |z| $.
+\end{lemma}
+
+\begin{theorem}
+	The group of conformal automorphisms of a unit ball consists of the fractional linear transforms.
+\end{theorem}
+
+\begin{theorem}
+	The group of conformal automorphisms of the complex plane consists of affine transformations.
+\end{theorem}
+
+\begin{corollary}
+	The group of conformal automorphisms of the extended complex plane consists of fractional linear transforms.
+\end{corollary}
+
+\begin{theorem}
+	The group of conformal automorphisms of an annulus consists of fractional linear transforms.
+\end{theorem}
+
+\begin{theorem}
+	If $ D $ is a multiply connected domain (and is not conformally equivalent to an annulus), then the group of its conformal automorphisms is finite.
+\end{theorem}
+
+\begin{theorem}
+	If $ f $ has partial complex derivatives in the domain $ D $, then it is complex differentiable.
+\end{theorem}
+
+\begin{lemma}
+	If $ f $ is bounded an has complex derivatives in the domain $ \{ |z| < r, |w| < R \} $ then $ f $ is continuous.
+\end{lemma}
+
+\begin{lemma}
+	If $ f $ is continuous an has complex derivatives, then
+	$$
+		F(z_0, w_0) = \frac{1}{(2 \pi i)^2} \int_{|z-z_0| = \epsilon_1, |w-w_0|=\epsilon_2} \frac{f(z,w)dwdz}{(w-w_0)(z-z_0)}.
+	$$
+\end{lemma}
+
+\end{document}
